@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Klinik Eunoia — Klinik Keluarga Terpercaya di Jakarta Selatan</title>
+  <meta name="description" content="Klinik Eunoia melayani kebutuhan kesehatan keluarga dengan layanan umum, gigi, anak, kandungan, laboratorium, vaksinasi, fisioterapi, dan medical check up." />
+  <meta name="keywords" content="Klinik Eunoia, klinik Jakarta Selatan, dokter Jakarta Selatan, klinik keluarga, BPJS, medical check up, laboratorium, vaksinasi" />
+  <meta name="author" content="Klinik Eunoia" />
+  <link rel="canonical" href="https://klinikeunoia.id/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Klinik Eunoia — Kesehatan Anda, Prioritas Kami" />
+  <meta property="og:description" content="Layanan kesehatan keluarga yang nyaman, profesional, dan mudah diakses." />
+  <meta property="og:url" content="https://klinikeunoia.id/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Klinik Eunoia — Klinik Keluarga Terpercaya" />
+  <meta name="twitter:description" content="Layanan kesehatan keluarga yang nyaman dan profesional." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          },
+          colors: {
+            primary: '#0B63CE',
+            blue2: '#1E88E5',
+            darkblue: '#0A2A43',
+            softblue: '#EAF4FF'
+          },
+          boxShadow: {
+            soft: '0 15px 45px rgba(15, 23, 42, 0.08)',
+            card: '0 8px 30px rgba(15, 23, 42, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: #bfdbfe;
+      color: #0a2a43;
+    }
+
+    :focus-visible {
+      outline: 3px solid #1e88e5;
+      outline-offset: 3px;
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(30,136,229,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30,136,229,.055) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #0b63ce, #1e88e5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,.84);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-card,
+    .doctor-card,
+    .facility-card,
+    .quick-card {
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+
+    .service-card:hover,
+    .doctor-card:hover,
+    .facility-card:hover,
+    .quick-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, .1);
+    }
+
+    .doctor-photo {
+      aspect-ratio: 4 / 4.5;
+      object-fit: cover;
+    }
+
+    .facility-photo {
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .mobile-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .faq-item.active .faq-content {
+      max-height: 400px;
+    }
+
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-chevron {
+      transition: transform .3s ease;
+    }
+
+    .testimonial-track {
+      transition: transform .5s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .fade-up {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+
+  <!-- MedicalClinic structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Klinik Eunoia",
+    "url": "https://klinikeunoia.id/",
+    "telephone": "+62-21-1234567",
+    "email": "halo@klinikeunoia.id",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Melati No. 88",
+      "addressLocality": "Jakarta Selatan",
+      "addressRegion": "DKI Jakarta",
+      "addressCountry": "ID"
+    },
+    "openingHours": [
+      "Mo-Sa 08:00-21:00",
+      "Su 09:00-15:00"
+    ],
+    "medicalSpecialty": [
+      "GeneralPractice",
+      "Dentistry",
+      "Pediatrics",
+      "Obstetrics",
+      "PhysicalTherapy"
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white">
+
+  <!-- Skip Link -->
+  <a href="#main-content"
+     class="fixed left-4 top-4 z-[100] -translate-y-20 rounded-lg bg-darkblue px-4 py-3 text-sm font-bold text-white transition focus:translate-y-0">
+    Lewati ke konten utama
+  </a>
+
+  <!-- TOP BAR -->
+  <div class="hidden bg-darkblue text-white lg:block">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs">
+      <div class="flex items-center gap-5">
+        <span class="flex items-center gap-2">
+          <i data-lucide="clock-3" class="h-3.5 w-3.5"></i>
+          Senin–Sabtu 08.00–21.00 · Minggu 09.00–15.00
+        </span>
+        <span class="flex items-center gap-2 text-red-100">
+          <i data-lucide="siren" class="h-3.5 w-3.5"></i>
+          IGD 24 Jam: (021) 1234567
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span>Jl. Melati No. 88, Jakarta Selatan</span>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+           class="transition hover:text-blue-200" aria-label="Instagram Klinik Eunoia">
+          <i data-lucide="instagram" class="h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-6">
+
+      <a href="#beranda" class="flex items-center gap-3" aria-label="Klinik Eunoia - Beranda">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary text-white shadow-sm">
+          <i data-lucide="heart-pulse" class="h-5 w-5"></i>
+        </span>
+        <span>
+          <span class="block text-lg font-extrabold leading-none text-darkblue">Klinik Eunoia</span>
+          <span class="mt-1 block text-[10px] font-semibold uppercase tracking-[.16em] text-slate-500">
+            Care With Heart
+          </span>
+        </span>
+      </a>
+
+      <nav id="desktop-nav" class="hidden items-center gap-5 xl:flex" aria-label="Navigasi utama">
+        <a href="#beranda" class="nav-link text-sm font-semibold text-primary">Beranda</a>
+        <a href="#layanan" class="nav-link text-sm font-semibold text-slate-600 hover:text-primary">Layanan</a>
+        <a href="#dokter" class="nav-link text-sm font-semibold text-slate-600 hover:text-primary">Dokter</a>
+        <a href="#jadwal" class="nav-link text-sm font-semibold text-slate-600 hover:text-primary">Jadwal</a>
+        <a href="#fasilitas" class="nav-link text-sm font-semibold text-slate-600 hover:text-primary">Fasilitas</a>
+        <a href="#testimoni" class="nav-link text-sm font-semibold text-slate-600 hover:text-primary">Testimoni</a>
+        <a href="#faq" class="nav-link text-sm font-semibold text-slate-600 hover:text-primary">FAQ</a>
+        <a href="#kontak" class="nav-link text-sm font-semibold text-slate-600 hover:text-primary">Kontak</a>
+      </nav>
+
+      <div class="hidden items-center gap-2 lg:flex">
+        <a href="#booking"
+           class="rounded-xl border border-blue-100 px-4 py-2.5 text-sm font-bold text-primary transition hover:bg-softblue">
+          Buat Janji
+        </a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Eunoia%2C%20saya%20ingin%20membuat%20janji%20konsultasi."
+           target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-blue-700">
+          <i data-lucide="message-circle" class="h-4 w-4"></i>
+          WhatsApp
+        </a>
+      </div>
+
+      <button id="menu-btn"
+              type="button"
+              class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-slate-700 xl:hidden"
+              aria-label="Buka menu"
+              aria-expanded="false">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-5 py-4 xl:hidden">
+      <nav class="flex flex-col gap-1" aria-label="Navigasi mobile">
+        <a href="#beranda" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">Beranda</a>
+        <a href="#layanan" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">Layanan</a>
+        <a href="#dokter" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">Dokter</a>
+        <a href="#jadwal" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">Jadwal</a>
+        <a href="#fasilitas" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">Fasilitas</a>
+        <a href="#testimoni" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">Testimoni</a>
+        <a href="#faq" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">FAQ</a>
+        <a href="#kontak" class="mobile-link rounded-lg px-3 py-3 text-sm font-semibold hover:bg-softblue">Kontak</a>
+
+        <div class="mt-3 grid grid-cols-2 gap-2">
+          <a href="#booking" class="rounded-xl bg-softblue py-3 text-center text-sm font-bold text-primary">
+            Buat Janji
+          </a>
+          <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Eunoia%2C%20saya%20ingin%20membuat%20janji."
+             target="_blank" rel="noopener noreferrer"
+             class="rounded-xl bg-primary py-3 text-center text-sm font-bold text-white">
+            WhatsApp
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="beranda" class="relative overflow-hidden bg-slate-50">
+      <div class="hero-grid absolute inset-0"></div>
+      <div class="absolute -right-32 top-10 h-96 w-96 rounded-full bg-blue-100/60 blur-3xl"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:py-20">
+
+        <div class="fade-up">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-xs font-bold text-primary shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            Klinik Keluarga Terpercaya
+          </div>
+
+          <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight text-darkblue sm:text-5xl lg:text-6xl">
+            Kesehatan Anda,
+            <span class="gradient-text">prioritas kami.</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+            Klinik Eunoia hadir untuk memberikan layanan kesehatan yang profesional,
+            nyaman, dan mudah diakses untuk Anda dan keluarga — dari pemeriksaan rutin
+            hingga kebutuhan kesehatan yang membutuhkan perhatian lebih.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#booking"
+               class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700">
+              Buat Janji Sekarang
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+
+            <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Eunoia%2C%20saya%20ingin%20berkonsultasi."
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3.5 text-sm font-bold text-slate-700 transition hover:border-blue-200 hover:bg-softblue hover:text-primary">
+              <i data-lucide="message-circle" class="h-4 w-4"></i>
+              Chat WhatsApp
+            </a>
+
+            <a href="#jadwal"
+               class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3.5 text-sm font-bold text-primary transition hover:bg-white">
+              Lihat Jadwal Dokter
+              <i data-lucide="calendar-days" class="h-4 w-4"></i>
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-2 gap-5 border-t border-slate-200 pt-7 sm:grid-cols-4">
+            <div>
+              <p class="text-2xl font-extrabold text-darkblue">12+</p>
+              <p class="mt-1 text-xs text-slate-500">Tahun melayani</p>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold text-darkblue">35K+</p>
+              <p class="mt-1 text-xs text-slate-500">Pasien dilayani</p>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold text-darkblue">15+</p>
+              <p class="mt-1 text-xs text-slate-500">Dokter & tenaga medis</p>
+            </div>
+            <div>
+              <p class="flex items-center gap-1 text-2xl font-extrabold text-darkblue">
+                4.9 <span class="text-sm text-amber-500">★</span>
+              </p>
+              <p class="mt-1 text-xs text-slate-500">Rating pasien</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-up relative">
+          <div class="overflow-hidden rounded-[2rem] border border-white bg-white p-2 shadow-soft">
+            <img
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1100&q=85"
+              alt="Dokter sedang berdiskusi dengan pasien di ruang konsultasi Klinik Eunoia"
+              class="hero-image h-[440px] w-full rounded-[1.5rem] object-cover sm:h-[520px]"
+              loading="eager"
+              onerror="imageFallback(this)"
+            />
+          </div>
+
+          <div class="glass absolute bottom-6 left-4 right-4 rounded-2xl border border-white p-4 shadow-lg sm:left-auto sm:w-[310px]">
+            <div class="flex items-start gap-3">
+              <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600">
+                <i data-lucide="shield-check" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-darkblue">Pelayanan yang mengutamakan Anda</p>
+                <p class="mt-1 text-xs leading-5 text-slate-500">
+                  Tim medis kami siap membantu dengan pendekatan yang profesional dan manusiawi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK ACTION -->
+    <section class="relative z-10 -mt-5 px-5 sm:px-6">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-3 lg:grid-cols-4">
+        <a href="#booking" class="quick-card rounded-2xl border border-slate-100 bg-white p-5 shadow-card">
+          <div class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-blue-50 text-primary">
+            <i data-lucide="calendar-plus" class="h-5 w-5"></i>
+          </div>
+          <h2 class="text-sm font-bold text-darkblue">Booking Online</h2>
+          <p class="mt-1 text-xs leading-5 text-slate-500">Pilih poli dan dokter sesuai kebutuhan.</p>
+        </a>
+
+        <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Eunoia%2C%20saya%20ingin%20telekonsultasi."
+           target="_blank" rel="noopener noreferrer"
+           class="quick-card rounded-2xl border border-slate-100 bg-white p-5 shadow-card">
+          <div class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-emerald-50 text-emerald-600">
+            <i data-lucide="video" class="h-5 w-5"></i>
+          </div>
+          <h2 class="text-sm font-bold text-darkblue">Telekonsultasi</h2>
+          <p class="mt-1 text-xs leading-5 text-slate-500">Konsultasi awal tanpa perlu datang langsung.</p>
+        </a>
+
+        <a href="#jadwal" class="quick-card rounded-2xl border border-slate-100 bg-white p-5 shadow-card">
+          <div class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-blue-50 text-primary">
+            <i data-lucide="clock-4" class="h-5 w-5"></i>
+          </div>
+          <h2 class="text-sm font-bold text-darkblue">Cek Jadwal</h2>
+          <p class="mt-1 text-xs leading-5 text-slate-500">Lihat jadwal praktik dokter terbaru.</p>
+        </a>
+
+        <a href="#kontak" class="quick-card rounded-2xl border border-slate-100 bg-white p-5 shadow-card">
+          <div class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-blue-50 text-primary">
+            <i data-lucide="map-pin" class="h-5 w-5"></i>
+          </div>
+          <h2 class="text-sm font-bold text-darkblue">Lokasi & Rute</h2>
+          <p class="mt-1 text-xs leading-5 text-slate-500">Temukan lokasi klinik dengan mudah.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="layanan" class="px-5 py-20 sm:px-6 lg:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="fade-up max-w-2xl">
+          <span class="text-sm font-bold uppercase tracking-wider text-primary">Layanan Kami</span>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-darkblue sm:text-4xl">
+            Perawatan kesehatan untuk kebutuhan Anda dan keluarga
+          </h2>
+          <p class="mt-4 leading-7 text-slate-600">
+            Dari pemeriksaan sederhana hingga layanan penunjang kesehatan,
+            kami membantu Anda mendapatkan perawatan yang sesuai.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Service cards -->
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="stethoscope"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Poli Umum</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Pemeriksaan dan konsultasi kesehatan untuk berbagai keluhan umum.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="smile"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Gigi</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Pemeriksaan gigi, pembersihan karang gigi, tambal, dan perawatan lainnya.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="baby"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Anak</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Pendampingan tumbuh kembang dan pemeriksaan kesehatan anak.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="heart"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Kandungan</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Konsultasi kesehatan ibu, kehamilan, dan pemeriksaan kandungan.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="test-tube-2"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Laboratorium</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Pemeriksaan laboratorium untuk membantu menunjang diagnosis dokter.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="accessibility"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Fisioterapi</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Program terapi untuk membantu pemulihan fungsi dan mobilitas tubuh.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="syringe"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Vaksinasi</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Vaksinasi sesuai kebutuhan dan rekomendasi tenaga kesehatan.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+
+          <div class="service-card fade-up rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-primary">
+              <i data-lucide="clipboard-check"></i>
+            </div>
+            <h3 class="mt-5 font-bold text-darkblue">Medical Check Up</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Pemeriksaan kesehatan berkala untuk memantau kondisi tubuh Anda.</p>
+            <a href="#booking" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">Buat Janji <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="bg-slate-50 px-5 py-20 sm:px-6 lg:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+        <div class="fade-up">
+          <span class="text-sm font-bold uppercase tracking-wider text-primary">Mengapa Eunoia?</span>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-darkblue sm:text-4xl">
+            Pelayanan medis yang tetap terasa manusiawi
+          </h2>
+          <p class="mt-5 leading-7 text-slate-600">
+            Kami percaya pengalaman berobat yang baik bukan hanya tentang fasilitas,
+            tetapi juga tentang bagaimana pasien didengar, dipahami, dan dilayani.
+          </p>
+
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            <div class="flex gap-3">
+              <div class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">
+                <i data-lucide="user-round-check" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-darkblue">Dokter berpengalaman</h3>
+                <p class="mt-1 text-xs leading-5 text-slate-500">Tim medis profesional dengan bidang keahlian yang beragam.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">
+                <i data-lucide="cpu" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-darkblue">Peralatan modern</h3>
+                <p class="mt-1 text-xs leading-5 text-slate-500">Peralatan penunjang dirawat dan digunakan sesuai standar.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">
+                <i data-lucide="timer" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-darkblue">Antrean lebih teratur</h3>
+                <p class="mt-1 text-xs leading-5 text-slate-500">Booking membantu Anda mengatur waktu kunjungan.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">
+                <i data-lucide="wallet-cards" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-darkblue">BPJS & asuransi</h3>
+                <p class="mt-1 text-xs leading-5 text-slate-500">Melayani pasien BPJS dan sejumlah perusahaan asuransi rekanan.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">
+                <i data-lucide="sofa" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-darkblue">Ruang nyaman</h3>
+                <p class="mt-1 text-xs leading-5 text-slate-500">Lingkungan bersih dan nyaman untuk pasien maupun keluarga.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">
+                <i data-lucide="lock-keyhole" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-darkblue">Privasi terjaga</h3>
+                <p class="mt-1 text-xs leading-5 text-slate-500">Informasi dan kebutuhan kesehatan pasien ditangani secara profesional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-up relative">
+          <img
+            src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=1000&q=85"
+            alt="Dokter dan tenaga kesehatan berdiskusi di lingkungan klinik"
+            class="h-[500px] w-full rounded-[2rem] object-cover shadow-soft"
+            loading="lazy"
+            onerror="imageFallback(this)"
+          />
+
+          <div class="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/60 bg-white/95 p-5 shadow-lg backdrop-blur">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Status Klinik</p>
+                <p id="open-status" class="mt-1 text-lg font-extrabold text-darkblue">Memeriksa jam layanan...</p>
+              </div>
+              <span id="status-dot" class="h-3 w-3 rounded-full bg-slate-300"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section id="dokter" class="px-5 py-20 sm:px-6 lg:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div class="fade-up max-w-2xl">
+            <span class="text-sm font-bold uppercase tracking-wider text-primary">Tim Medis</span>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-darkblue sm:text-4xl">
+              Dokter yang siap mendampingi Anda
+            </h2>
+            <p class="mt-4 leading-7 text-slate-600">
+              Pilih dokter berdasarkan kebutuhan kesehatan dan jadwal praktik yang tersedia.
+            </p>
+          </div>
+          <a href="#jadwal" class="text-sm font-bold text-primary">Lihat semua jadwal →</a>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          <article class="doctor-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=85"
+                 alt="dr. Aditya Pratama, Sp.PD"
+                 class="doctor-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-5">
+              <h3 class="font-bold text-darkblue">dr. Aditya Pratama, Sp.PD</h3>
+              <p class="mt-1 text-sm font-semibold text-primary">Penyakit Dalam</p>
+              <p class="mt-3 text-xs text-slate-500">Senin & Rabu · 16.00–20.00</p>
+              <a href="#booking" class="mt-4 flex items-center justify-center rounded-xl bg-softblue py-2.5 text-xs font-bold text-primary hover:bg-blue-100">Buat Janji</a>
+            </div>
+          </article>
+
+          <article class="doctor-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85"
+                 alt="dr. Maria Lestari, Sp.A"
+                 class="doctor-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-5">
+              <h3 class="font-bold text-darkblue">dr. Maria Lestari, Sp.A</h3>
+              <p class="mt-1 text-sm font-semibold text-primary">Spesialis Anak</p>
+              <p class="mt-3 text-xs text-slate-500">Selasa & Kamis · 15.00–19.00</p>
+              <a href="#booking" class="mt-4 flex items-center justify-center rounded-xl bg-softblue py-2.5 text-xs font-bold text-primary hover:bg-blue-100">Buat Janji</a>
+            </div>
+          </article>
+
+          <article class="doctor-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=85"
+                 alt="dr. Sarah Wijaya, Sp.OG"
+                 class="doctor-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-5">
+              <h3 class="font-bold text-darkblue">dr. Sarah Wijaya, Sp.OG</h3>
+              <p class="mt-1 text-sm font-semibold text-primary">Obstetri & Ginekologi</p>
+              <p class="mt-3 text-xs text-slate-500">Jumat · 15.00–20.00</p>
+              <a href="#booking" class="mt-4 flex items-center justify-center rounded-xl bg-softblue py-2.5 text-xs font-bold text-primary hover:bg-blue-100">Buat Janji</a>
+            </div>
+          </article>
+
+          <article class="doctor-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&w=600&q=85"
+                 alt="drg. Kevin Santoso"
+                 class="doctor-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-5">
+              <h3 class="font-bold text-darkblue">drg. Kevin Santoso</h3>
+              <p class="mt-1 text-sm font-semibold text-primary">Dokter Gigi</p>
+              <p class="mt-3 text-xs text-slate-500">Sabtu · 09.00–15.00</p>
+              <a href="#booking" class="mt-4 flex items-center justify-center rounded-xl bg-softblue py-2.5 text-xs font-bold text-primary hover:bg-blue-100">Buat Janji</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="jadwal" class="bg-slate-50 px-5 py-20 sm:px-6 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="fade-up">
+          <span class="text-sm font-bold uppercase tracking-wider text-primary">Jadwal Praktik</span>
+          <h2 class="mt-3 text-3xl font-extrabold text-darkblue sm:text-4xl">Atur waktu kunjungan Anda</h2>
+          <p class="mt-4 max-w-2xl leading-7 text-slate-600">
+            Jadwal berikut merupakan jadwal contoh dan dapat berubah. Hubungi kami untuk memastikan ketersediaan dokter.
+          </p>
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[700px] text-left">
+              <thead class="bg-darkblue text-white">
+                <tr>
+                  <th class="px-5 py-4 text-xs font-bold uppercase tracking-wider">Hari</th>
+                  <th class="px-5 py-4 text-xs font-bold uppercase tracking-wider">Poli</th>
+                  <th class="px-5 py-4 text-xs font-bold uppercase tracking-wider">Dokter</th>
+                  <th class="px-5 py-4 text-xs font-bold uppercase tracking-wider">Jam</th>
+                  <th class="px-5 py-4 text-xs font-bold uppercase tracking-wider">Booking</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr>
+                  <td class="px-5 py-4 text-sm font-semibold">Senin</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">Penyakit Dalam</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">dr. Aditya Pratama, Sp.PD</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">16.00–20.00</td>
+                  <td class="px-5 py-4"><a href="#booking" class="text-sm font-bold text-primary">Pilih →</a></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 text-sm font-semibold">Selasa</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">Anak</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">dr. Maria Lestari, Sp.A</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">15.00–19.00</td>
+                  <td class="px-5 py-4"><a href="#booking" class="text-sm font-bold text-primary">Pilih →</a></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 text-sm font-semibold">Rabu</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">Penyakit Dalam</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">dr. Aditya Pratama, Sp.PD</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">16.00–20.00</td>
+                  <td class="px-5 py-4"><a href="#booking" class="text-sm font-bold text-primary">Pilih →</a></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 text-sm font-semibold">Kamis</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">Anak</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">dr. Maria Lestari, Sp.A</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">15.00–19.00</td>
+                  <td class="px-5 py-4"><a href="#booking" class="text-sm font-bold text-primary">Pilih →</a></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 text-sm font-semibold">Jumat</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">Kandungan</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">dr. Sarah Wijaya, Sp.OG</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">15.00–20.00</td>
+                  <td class="px-5 py-4"><a href="#booking" class="text-sm font-bold text-primary">Pilih →</a></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 text-sm font-semibold">Sabtu</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">Gigi</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">drg. Kevin Santoso</td>
+                  <td class="px-5 py-4 text-sm text-slate-600">09.00–15.00</td>
+                  <td class="px-5 py-4"><a href="#booking" class="text-sm font-bold text-primary">Pilih →</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITIES -->
+    <section id="fasilitas" class="px-5 py-20 sm:px-6 lg:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="fade-up max-w-2xl">
+          <span class="text-sm font-bold uppercase tracking-wider text-primary">Fasilitas</span>
+          <h2 class="mt-3 text-3xl font-extrabold text-darkblue sm:text-4xl">
+            Lingkungan yang nyaman untuk proses perawatan
+          </h2>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="facility-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=85"
+                 alt="Ruang tunggu Klinik Eunoia"
+                 class="facility-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-4"><h3 class="font-bold text-darkblue">Ruang Tunggu</h3><p class="mt-1 text-xs text-slate-500">Area tunggu bersih dan nyaman.</p></div>
+          </div>
+
+          <div class="facility-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1580281657527-47f249e8f4df?auto=format&fit=crop&w=800&q=85"
+                 alt="Ruang pemeriksaan pasien"
+                 class="facility-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-4"><h3 class="font-bold text-darkblue">Ruang Periksa</h3><p class="mt-1 text-xs text-slate-500">Ruang konsultasi dengan privasi terjaga.</p></div>
+          </div>
+
+          <div class="facility-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=85"
+                 alt="Fasilitas laboratorium medis"
+                 class="facility-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-4"><h3 class="font-bold text-darkblue">Laboratorium</h3><p class="mt-1 text-xs text-slate-500">Pemeriksaan penunjang sesuai kebutuhan.</p></div>
+          </div>
+
+          <div class="facility-card fade-up overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=800&q=85"
+                 alt="Area farmasi klinik"
+                 class="facility-photo w-full"
+                 loading="lazy"
+                 onerror="imageFallback(this)" />
+            <div class="p-4"><h3 class="font-bold text-darkblue">Farmasi</h3><p class="mt-1 text-xs text-slate-500">Kebutuhan obat dan informasi penggunaan.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimoni" class="bg-darkblue px-5 py-20 text-white sm:px-6 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <span class="text-sm font-bold uppercase tracking-wider text-blue-300">Cerita Pasien</span>
+            <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">Pengalaman mereka di Eunoia</h2>
+          </div>
+
+          <div class="flex gap-2">
+            <button id="prev-testimonial" class="grid h-10 w-10 place-items-center rounded-full border border-white/20 hover:bg-white/10" aria-label="Testimoni sebelumnya">
+              <i data-lucide="arrow-left" class="h-4 w-4"></i>
+            </button>
+            <button id="next-testimonial" class="grid h-10 w-10 place-items-center rounded-full border border-white/20 hover:bg-white/10" aria-label="Testimoni berikutnya">
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="testimonial-slider" class="mt-10 overflow-hidden">
+          <div id="testimonial-track" class="testimonial-track flex">
+            <article class="testimonial-slide min-w-full lg:min-w-[33.333%] lg:px-2">
+              <div class="h-full rounded-2xl border border-white/10 bg-white/5 p-6">
+                <div class="flex gap-1 text-amber-400" aria-label="Rating 5 dari 5">★★★★★</div>
+                <p class="mt-5 text-sm leading-7 text-slate-200">
+                  “Proses pendaftaran cukup jelas dan stafnya membantu menjelaskan tahapan pemeriksaan. Ruang tunggunya juga nyaman.”
+                </p>
+                <div class="mt-6 flex items-center gap-3">
+                  <div class="grid h-10 w-10 place-items-center rounded-full bg-blue-500/20 text-sm font-bold">AN</div>
+                  <div><p class="text-sm font-bold">Ayu N.</p><p class="text-xs text-slate-400">Pasien Poli Umum</p></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-slide min-w-full lg:min-w-[33.333%] lg:px-2">
+              <div class="h-full rounded-2xl border border-white/10 bg-white/5 p-6">
+                <div class="flex gap-1 text-amber-400" aria-label="Rating 5 dari 5">★★★★★</div>
+                <p class="mt-5 text-sm leading-7 text-slate-200">
+                  “Saya booking terlebih dahulu lewat WhatsApp. Responsnya cepat dan jadwal dokter diinformasikan dengan jelas.”
+                </p>
+                <div class="mt-6 flex items-center gap-3">
+                  <div class="grid h-10 w-10 place-items-center rounded-full bg-blue-500/20 text-sm font-bold">RF</div>
+                  <div><p class="text-sm font-bold">Rizky F.</p><p class="text-xs text-slate-400">Pasien Poli Anak</p></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-slide min-w-full lg:min-w-[33.333%] lg:px-2">
+              <div class="h-full rounded-2xl border border-white/10 bg-white/5 p-6">
+                <div class="flex gap-1 text-amber-400" aria-label="Rating 5 dari 5">★★★★★</div>
+                <p class="mt-5 text-sm leading-7 text-slate-200">
+                  “Dokternya menjelaskan kondisi saya dengan bahasa yang mudah dipahami. Pengalaman konsultasinya terasa personal.”
+                </p>
+                <div class="mt-6 flex items-center gap-3">
+                  <div class="grid h-10 w-10 place-items-center rounded-full bg-blue-500/20 text-sm font-bold">DS</div>
+                  <div><p class="text-sm font-bold">Dina S.</p><p class="text-xs text-slate-400">Pasien Penyakit Dalam</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="border-b border-slate-100 px-5 py-14 sm:px-6">
+      <div class="mx-auto max-w-7xl text-center">
+        <p class="text-xs font-bold uppercase tracking-[.18em] text-slate-400">Partner & Penjamin</p>
+        <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-sm font-extrabold text-slate-500">BPJS</div>
+          <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-sm font-extrabold text-slate-500">ALLIANZ</div>
+          <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-sm font-extrabold text-slate-500">PRUDENTIAL</div>
+          <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-sm font-extrabold text-slate-500">AXA</div>
+          <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-sm font-extrabold text-slate-500">MANDIRI INHEALTH</div>
+          <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-sm font-extrabold text-slate-500">REKANAN</div>
+        </div>
+        <p class="mt-5 text-xs text-slate-400">Ketersediaan penjamin dan cakupan layanan dapat berbeda. Silakan konfirmasi sebelum kunjungan.</p>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="bg-slate-50 px-5 py-20 sm:px-6 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+        <div class="fade-up">
+          <span class="text-sm font-bold uppercase tracking-wider text-primary">Booking Online</span>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-darkblue sm:text-4xl">
+            Atur kunjungan sebelum datang
+          </h2>
+          <p class="mt-5 leading-7 text-slate-600">
+            Isi data singkat berikut. Setelah dikirim, Anda akan diarahkan ke WhatsApp
+            untuk mengonfirmasi jadwal dengan tim Klinik Eunoia.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex gap-3">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">1</span>
+              <div><p class="font-bold text-darkblue">Isi data pasien</p><p class="mt-1 text-xs leading-5 text-slate-500">Lengkapi nama dan nomor yang dapat dihubungi.</p></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">2</span>
+              <div><p class="font-bold text-darkblue">Pilih layanan</p><p class="mt-1 text-xs leading-5 text-slate-500">Pilih poli dan dokter yang tersedia.</p></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white text-primary shadow-sm">3</span>
+              <div><p class="font-bold text-darkblue">Konfirmasi via WhatsApp</p><p class="mt-1 text-xs leading-5 text-slate-500">Tim kami akan membantu memastikan jadwal.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <form id="booking-form" class="fade-up rounded-3xl border border-slate-200 bg-white p-6 shadow-soft sm:p-8" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+
+            <div>
+              <label for="name" class="text-sm font-bold text-slate-700">Nama lengkap *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required
+                     class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-blue-50"
+                     placeholder="Contoh: Budi Santoso" />
+              <p class="error-message mt-1 hidden text-xs font-medium text-red-600"></p>
+            </div>
+
+            <div>
+              <label for="phone" class="text-sm font-bold text-slate-700">Nomor WhatsApp *</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required
+                     class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-blue-50"
+                     placeholder="0812-3456-7890" />
+              <p class="error-message mt-1 hidden text-xs font-medium text-red-600"></p>
+            </div>
+
+            <div>
+              <label for="date" class="text-sm font-bold text-slate-700">Tanggal kunjungan *</label>
+              <input id="date" name="date" type="date" required
+                     class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-blue-50" />
+              <p class="error-message mt-1 hidden text-xs font-medium text-red-600"></p>
+            </div>
+
+            <div>
+              <label for="service" class="text-sm font-bold text-slate-700">Poli / layanan *</label>
+              <select id="service" name="service" required
+                      class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-blue-50">
+                <option value="">Pilih layanan</option>
+                <option>Poli Umum</option>
+                <option>Gigi</option>
+                <option>Anak</option>
+                <option>Kandungan</option>
+                <option>Laboratorium</option>
+                <option>Fisioterapi</option>
+                <option>Vaksinasi</option>
+                <option>Medical Check Up</option>
+              </select>
+              <p class="error-message mt-1 hidden text-xs font-medium text-red-600"></p>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="doctor" class="text-sm font-bold text-slate-700">Dokter</label>
+              <select id="doctor" name="doctor"
+                      class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-blue-50">
+                <option value="">Tidak menentukan dokter</option>
+                <option>dr. Aditya Pratama, Sp.PD</option>
+                <option>dr. Maria Lestari, Sp.A</option>
+                <option>dr. Sarah Wijaya, Sp.OG</option>
+                <option>drg. Kevin Santoso</option>
+              </select>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="complaint" class="text-sm font-bold text-slate-700">Keluhan / kebutuhan</label>
+              <textarea id="complaint" name="complaint" rows="4"
+                        class="mt-2 w-full resize-none rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-4 focus:ring-blue-50"
+                        placeholder="Ceritakan secara singkat kebutuhan atau keluhan Anda."></textarea>
+            </div>
+          </div>
+
+          <button type="submit"
+                  class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-100 transition hover:bg-blue-700">
+            <i data-lucide="message-circle" class="h-4 w-4"></i>
+            Lanjutkan ke WhatsApp
+          </button>
+
+          <p class="mt-4 text-center text-xs leading-5 text-slate-400">
+            Pengiriman formulir akan membuka WhatsApp. Jadwal dianggap terkonfirmasi setelah mendapat balasan dari tim klinik.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="px-5 py-20 sm:px-6 lg:py-28">
+      <div class="mx-auto max-w-3xl">
+        <div class="text-center">
+          <span class="text-sm font-bold uppercase tracking-wider text-primary">FAQ</span>
+          <h2 class="mt-3 text-3xl font-extrabold text-darkblue sm:text-4xl">Pertanyaan yang sering ditanyakan</h2>
+        </div>
+
+        <div class="mt-10 space-y-3">
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Kapan Klinik Eunoia buka?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Klinik melayani Senin–Sabtu pukul 08.00–21.00 dan Minggu pukul 09.00–15.00.
+                Layanan IGD tersedia 24 jam.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Bagaimana cara membuat janji?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Anda dapat mengisi formulir booking di halaman ini atau langsung menghubungi WhatsApp Klinik Eunoia.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Apakah menerima pasien BPJS?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Klinik melayani BPJS untuk layanan yang termasuk dalam cakupan kerja sama. Silakan konfirmasi jenis layanan dan persyaratan sebelum datang.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Apakah tersedia area parkir?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Tersedia area parkir untuk pasien. Kapasitas dapat berubah sesuai kondisi pada jam kunjungan.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Apakah tersedia layanan vaksinasi?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Ya. Ketersediaan vaksin dapat berbeda berdasarkan jenis dan stok. Hubungi kami terlebih dahulu untuk memastikan.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Kapan hasil laboratorium dapat diambil?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Waktu hasil berbeda berdasarkan jenis pemeriksaan. Estimasi akan diinformasikan oleh petugas saat pemeriksaan dilakukan.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Apakah tersedia telekonsultasi?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Tersedia untuk kebutuhan tertentu. Hubungi WhatsApp kami untuk mengetahui ketersediaan dokter dan jenis konsultasi yang dapat dilakukan secara daring.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-5 p-5 text-left" aria-expanded="false">
+              <span class="text-sm font-bold text-darkblue">Metode pembayaran apa yang tersedia?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-slate-400"></i>
+            </button>
+            <div class="faq-content">
+              <p class="px-5 pb-5 text-sm leading-7 text-slate-600">
+                Pembayaran dapat dilakukan menggunakan metode yang tersedia di klinik. Untuk jenis kartu atau penjamin tertentu, silakan konfirmasi terlebih dahulu.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="px-5 pb-20 sm:px-6 lg:pb-28">
+      <div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-blue-700 px-6 py-12 text-white shadow-soft sm:px-10 lg:px-16 lg:py-16">
+        <div class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+          <div class="max-w-2xl">
+            <p class="text-sm font-bold uppercase tracking-wider text-blue-100">Saatnya menjaga kesehatan</p>
+            <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">Tidak perlu menunggu sampai keluhan bertambah.</h2>
+            <p class="mt-4 max-w-xl leading-7 text-blue-100">
+              Atur jadwal pemeriksaan Anda dan keluarga dengan lebih mudah bersama Klinik Eunoia.
+            </p>
+          </div>
+
+          <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <a href="#booking" class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-primary transition hover:bg-blue-50">
+              Buat Janji
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+            <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Eunoia%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20klinik."
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">
+              <i data-lucide="message-circle" class="h-4 w-4"></i>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="kontak" class="bg-slate-50 px-5 py-20 sm:px-6 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-8 lg:grid-cols-[.8fr_1.2fr]">
+          <div class="fade-up">
+            <span class="text-sm font-bold uppercase tracking-wider text-primary">Kontak & Lokasi</span>
+            <h2 class="mt-3 text-3xl font-extrabold text-darkblue sm:text-4xl">
+              Kami mudah dijangkau
+            </h2>
+
+            <div class="mt-8 space-y-5">
+              <div class="flex gap-4">
+                <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-primary shadow-sm"><i data-lucide="map-pin"></i></div>
+                <div><p class="text-sm font-bold text-darkblue">Alamat</p><p class="mt-1 text-sm leading-6 text-slate-500">Jl. Melati No. 88, Jakarta Selatan, DKI Jakarta</p></div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-primary shadow-sm"><i data-lucide="phone"></i></div>
+                <div><p class="text-sm font-bold text-darkblue">Telepon</p><a href="tel:+62211234567" class="mt-1 block text-sm text-primary hover:underline">(021) 1234567</a></div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-emerald-600 shadow-sm"><i data-lucide="message-circle"></i></div>
+                <div><p class="text-sm font-bold text-darkblue">WhatsApp</p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="mt-1 block text-sm text-emerald-600 hover:underline">0812-3456-7890</a></div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-primary shadow-sm"><i data-lucide="mail"></i></div>
+                <div><p class="text-sm font-bold text-darkblue">Email</p><a href="mailto:halo@klinikeunoia.id" class="mt-1 block text-sm text-primary hover:underline">halo@klinikeunoia.id</a></div>
+              </div>
+
+              <div class="rounded-2xl border border-blue-100 bg-softblue p-5">
+                <div class="flex gap-3">
+                  <i data-lucide="clock-3" class="mt-0.5 h-5 w-5 shrink-0 text-primary"></i>
+                  <div>
+                    <p class="text-sm font-bold text-darkblue">Jam Operasional</p>
+                    <p class="mt-2 text-xs leading-6 text-slate-600">
+                      Senin–Sabtu: 08.00–21.00<br />
+                      Minggu: 09.00–15.00<br />
+                      <strong>IGD: 24 Jam</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-up overflow-hidden rounded-3xl border border-slate-200 bg-white p-2 shadow-card">
+            <iframe
+              title="Lokasi Klinik Eunoia di Jakarta Selatan"
+              src="https://www.google.com/maps?q=Jakarta%20Selatan&output=embed"
+              class="h-[430px] w-full rounded-2xl border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="flex flex-col justify-between gap-4 p-4 sm:flex-row sm:items-center">
+              <div>
+                <p class="text-sm font-bold text-darkblue">Klinik Eunoia</p>
+                <p class="mt-1 text-xs text-slate-500">Jl. Melati No. 88, Jakarta Selatan</p>
+              </div>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Jl.%20Melati%20No.%2088%2C%20Jakarta%20Selatan"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-xs font-bold text-white hover:bg-blue-700">
+                <i data-lucide="navigation" class="h-4 w-4"></i>
+                Buka Rute
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#071e30] text-slate-300">
+    <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_.8fr_.8fr_1fr]">
+
+        <div>
+          <a href="#beranda" class="flex items-center gap-3 text-white">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary">
+              <i data-lucide="heart-pulse"></i>
+            </span>
+            <span class="text-lg font-extrabold">Klinik Eunoia</span>
+          </a>
+          <p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+            Layanan kesehatan keluarga yang profesional, nyaman, dan mudah diakses.
+            Kami hadir untuk mendampingi Anda menjaga kesehatan di setiap tahap kehidupan.
+          </p>
+
+          <div class="mt-5 flex gap-2">
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+               class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 hover:bg-white/10">
+              <i data-lucide="instagram" class="h-4 w-4"></i>
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+               class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 hover:bg-white/10">
+              <i data-lucide="message-circle" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold text-white">Navigasi</h3>
+          <div class="mt-5 space-y-3 text-sm">
+            <a href="#beranda" class="block hover:text-white">Beranda</a>
+            <a href="#layanan" class="block hover:text-white">Layanan</a>
+            <a href="#dokter" class="block hover:text-white">Dokter</a>
+            <a href="#jadwal" class="block hover:text-white">Jadwal</a>
+            <a href="#fasilitas" class="block hover:text-white">Fasilitas</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold text-white">Layanan</h3>
+          <div class="mt-5 space-y-3 text-sm">
+            <a href="#layanan" class="block hover:text-white">Poli Umum</a>
+            <a href="#layanan" class="block hover:text-white">Gigi</a>
+            <a href="#layanan" class="block hover:text-white">Anak</a>
+            <a href="#layanan" class="block hover:text-white">Kandungan</a>
+            <a href="#layanan" class="block hover:text-white">Laboratorium</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold text-white">Hubungi Kami</h3>
+          <div class="mt-5 space-y-4 text-sm">
+            <a href="tel:+62211234567" class="flex gap-2 hover:text-white">
+              <i data-lucide="phone" class="h-4 w-4 shrink-0"></i> (021) 1234567
+            </a>
+            <a href="mailto:halo@klinikeunoia.id" class="flex gap-2 hover:text-white">
+              <i data-lucide="mail" class="h-4 w-4 shrink-0"></i> halo@klinikeunoia.id
+            </a>
+            <span class="flex gap-2">
+              <i data-lucide="map-pin" class="h-4 w-4 shrink-0"></i>
+              Jl. Melati No. 88, Jakarta Selatan
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-white/10 pt-6">
+        <div class="flex flex-col gap-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Klinik Eunoia. Semua hak dilindungi.</p>
+          <div class="flex gap-5">
+            <a href="#" class="hover:text-white">Kebijakan Privasi</a>
+            <a href="#" class="hover:text-white">Syarat & Ketentuan</a>
+          </div>
+        </div>
+
+        <p class="mt-4 text-[11px] leading-5 text-slate-600">
+          <strong>Catatan template:</strong> Klinik Eunoia pada halaman ini merupakan contoh/template.
+          Nama dokter, jadwal, alamat, partner, foto, rating, dan data layanan dapat diganti sesuai informasi klinik yang sebenarnya.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating actions -->
+  <div class="fixed bottom-24 right-4 z-40 hidden flex-col gap-2 sm:flex lg:bottom-6">
+    <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Eunoia%2C%20saya%20ingin%20bertanya%20tentang%20layanan."
+       target="_blank" rel="noopener noreferrer"
+       class="grid h-12 w-12 place-items-center rounded-full bg-emerald-500 text-white shadow-lg transition hover:scale-105 hover:bg-emerald-600"
+       aria-label="Hubungi Klinik Eunoia melalui WhatsApp">
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <a href="tel:+62211234567"
+       class="grid h-12 w-12 place-items-center rounded-full bg-primary text-white shadow-lg transition hover:scale-105 hover:bg-blue-700"
+       aria-label="Telepon Klinik Eunoia">
+      <i data-lucide="phone"></i>
+    </a>
+
+    <button id="back-top"
+            type="button"
+            class="hidden h-12 w-12 place-items-center rounded-full bg-darkblue text-white shadow-lg transition hover:scale-105"
+            aria-label="Kembali ke atas">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Mobile sticky bottom CTA -->
+  <div class="mobile-bottom fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white/95 p-2 backdrop-blur sm:hidden">
+    <div class="grid grid-cols-3 gap-2">
+      <a href="https://wa.me/6281234567890?text=Halo%20Klinik%20Eunoia%2C%20saya%20ingin%20bertanya."
+         target="_blank" rel="noopener noreferrer"
+         class="flex flex-col items-center justify-center gap-1 rounded-xl bg-emerald-50 py-2 text-[10px] font-bold text-emerald-700">
+        <i data-lucide="message-circle" class="h-4 w-4"></i>
+        WhatsApp
+      </a>
+
+      <a href="tel:+62211234567"
+         class="flex flex-col items-center justify-center gap-1 rounded-xl bg-blue-50 py-2 text-[10px] font-bold text-primary">
+        <i data-lucide="phone" class="h-4 w-4"></i>
+        Telepon
+      </a>
+
+      <a href="#jadwal"
+         class="flex flex-col items-center justify-center gap-1 rounded-xl bg-primary py-2 text-[10px] font-bold text-white">
+        <i data-lucide="calendar-days" class="h-4 w-4"></i>
+        Jadwal
+      </a>
+    </div>
+  </div>
+
+  <script>
+    /* ============================
+       Basic helpers
+    ============================ */
+
+    lucide.createIcons();
+
+    function imageFallback(img) {
+      img.onerror = null;
+      img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+          <rect width="800" height="500" fill="#EAF4FF"/>
+          <g fill="none" stroke="#0B63CE" stroke-width="3">
+            <circle cx="400" cy="220" r="70"/>
+            <path d="M360 220h80M400 180v80"/>
+          </g>
+          <text x="400" y="340" text-anchor="middle" font-family="Arial" font-size="22" fill="#0A2A43">
+            Klinik Eunoia
+          </text>
+        </svg>
+      `);
+    }
+
+    /* ============================
+       Mobile menu
+    ============================ */
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+
+      menuBtn.innerHTML = !isOpen
+        ? '<i data-lucide="x" class="h-5 w-5"></i>'
+        : '<i data-lucide="menu" class="h-5 w-5"></i>';
+
+      lucide.createIcons();
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.innerHTML = '<i data-lucide="menu" class="h-5 w-5"></i>';
+        lucide.createIcons();
+      });
+    });
+
+    /* ============================
+       Smooth scroll with header offset
+    ============================ */
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', event => {
+        const targetId = link.getAttribute('href');
+
+        if (!targetId || targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+        if (!target) return;
+
+        event.preventDefault();
+
+        const headerHeight = document.getElementById('site-header').offsetHeight;
+        const y = target.getBoundingClientRect().top + window.scrollY - headerHeight - 10;
+
+        window.scrollTo({
+          top: y,
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+        });
+
+        history.replaceState(null, '', targetId);
+      });
+    });
+
+    /* ============================
+       Active navigation
+    ============================ */
+
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const sectionObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+
+          navLinks.forEach(link => {
+            link.classList.remove('text-primary');
+            link.classList.add('text-slate-600');
+          });
+
+          const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+
+          if (active) {
+            active.classList.remove('text-slate-600');
+            active.classList.add('text-primary');
+          }
+        });
+      },
+      {
+        rootMargin: '-35% 0px -55% 0px'
+      }
+    );
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    /* ============================
+       Scroll reveal
+    ============================ */
+
+    const revealItems = document.querySelectorAll('.fade-up');
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      revealItems.forEach(item => revealObserver.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('show'));
+    }
+
+    /* ============================
+       FAQ accordion
+    ============================ */
+
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('active');
+          other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ============================
+       Clinic open/closed status
+       Senin-Sabtu 08:00-21:00
+       Minggu 09:00-15:00
+       IGD 24 jam
+    ============================ */
+
+    function updateOpenStatus() {
+      const status = document.getElementById('open-status');
+      const dot = document.getElementById('status-dot');
+
+      const now = new Date();
+      const day = now.getDay();
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+      const currentMinutes = hour * 60 + minute;
+
+      let openMinutes;
+      let closeMinutes;
+
+      if (day === 0) {
+        openMinutes = 9 * 60;
+        closeMinutes = 15 * 60;
+      } else {
+        openMinutes = 8 * 60;
+        closeMinutes = 21 * 60;
+      }
+
+      const isOpen = currentMinutes >= openMinutes && currentMinutes < closeMinutes;
+
+      if (isOpen) {
+        status.textContent = 'Sedang Buka';
+        status.className = 'mt-1 text-lg font-extrabold text-emerald-600';
+        dot.className = 'h-3 w-3 rounded-full bg-emerald-500';
+      } else {
+        status.textContent = 'Sedang Tutup · IGD 24 Jam';
+        status.className = 'mt-1 text-lg font-extrabold text-slate-700';
+        dot.className = 'h-3 w-3 rounded-full bg-slate-400';
+      }
+    }
+
+    updateOpenStatus();
+    setInterval(updateOpenStatus, 60000);
+
+    /* ============================
+       Booking form
+    ============================ */
+
+    const bookingForm = document.getElementById('booking-form');
+    const dateInput = document.getElementById('date');
+
+    const today = new Date();
+    const todayISO = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+      .toISOString()
+      .split('T')[0];
+
+    dateInput.min = todayISO;
+
+    function showError(input, message) {
+      const wrapper = input.parentElement;
+      const error = wrapper.querySelector('.error-message');
+
+      if (!error) return;
+
+      error.textContent = message;
+      error.classList.remove('hidden');
+      input.classList.add('border-red-400', 'ring-4', 'ring-red-50');
+    }
+
+    function clearError(input) {
+      const wrapper = input.parentElement;
+      const error = wrapper.querySelector('.error-message');
+
+      if (error) {
+        error.textContent = '';
+        error.classList.add('hidden');
+      }
+
+      input.classList.remove('border-red-400', 'ring-4', 'ring-red-50');
+    }
+
+    bookingForm.querySelectorAll('input, select, textarea').forEach(input => {
+      input.addEventListener('input', () => clearError(input));
+      input.addEventListener('change', () => clearError(input));
+    });
+
+    bookingForm.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const name = document.getElementById('name');
+      const phone = document.getElementById('phone');
+      const date = document.getElementById('date');
+      const service = document.getElementById('service');
+      const doctor = document.getElementById('doctor');
+      const complaint = document.getElementById('complaint');
+
+      let valid = true;
+
+      if (name.value.trim().length < 2) {
+        showError(name, 'Masukkan nama lengkap Anda.');
+        valid = false;
+      }
+
+      const cleanPhone = phone.value.replace(/[^\d+]/g, '');
+
+      if (cleanPhone.length < 9) {
+        showError(phone, 'Masukkan nomor WhatsApp yang valid.');
+        valid = false;
+      }
+
+      if (!date.value) {
+        showError(date, 'Pilih tanggal kunjungan.');
+        valid = false;
+      }
+
+      if (!service.value) {
+        showError(service, 'Pilih layanan yang dibutuhkan.');
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      const formattedDate = new Intl.DateTimeFormat('id-ID', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      }).format(new Date(`${date.value}T12:00:00`));
+
+      const message =
+`Halo Klinik Eunoia, saya ingin membuat janji.
+
+Nama: ${name.value.trim()}
+No. WhatsApp: ${phone.value.trim()}
+Tanggal kunjungan: ${formattedDate}
+Poli/Layanan: ${service.value}
+Dokter: ${doctor.value || 'Tidak menentukan dokter'}
+Keluhan/Kebutuhan: ${complaint.value.trim() || '-'}
+
+Mohon dibantu konfirmasi ketersediaan jadwal. Terima kasih.`;
+
+      const whatsappURL = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+    });
+
+    /* ============================
+       Testimonials
+    ============================ */
+
+    const track = document.getElementById('testimonial-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.getElementById('prev-testimonial');
+    const nextBtn = document.getElementById('next-testimonial');
+
+    let testimonialIndex = 0;
+    let testimonialTimer;
+
+    function visibleTestimonials() {
+      return window.innerWidth >= 1024 ? 3 : 1;
+    }
+
+    function updateTestimonials() {
+      const visible = visibleTestimonials();
+      const maxIndex = Math.max(0, slides.length - visible);
+
+      testimonialIndex = Math.min(testimonialIndex, maxIndex);
+
+      const percentage = 100 / visible;
+      track.style.transform = `translateX(-${testimonialIndex * percentage}%)`;
+    }
+
+    function nextTestimonial() {
+      const visible = visibleTestimonials();
+      const maxIndex = Math.max(0, slides.length - visible);
+
+      testimonialIndex = testimonialIndex >= maxIndex ? 0 : testimonialIndex + 1;
+      updateTestimonials();
+    }
+
+    function previousTestimonial() {
+      const visible = visibleTestimonials();
+      const maxIndex = Math.max(0, slides.length - visible);
+
+      testimonialIndex = testimonialIndex <= 0 ? maxIndex : testimonialIndex - 1;
+      updateTestimonials();
+    }
+
+    prevBtn.addEventListener('click', previousTestimonial);
+    nextBtn.addEventListener('click', nextTestimonial);
+
+    function startTestimonialTimer() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      clearInterval(testimonialTimer);
+      testimonialTimer = setInterval(nextTestimonial, 5500);
+    }
+
+    startTestimonialTimer();
+    updateTestimonials();
+
+    document.getElementById('testimonial-slider').addEventListener('mouseenter', () => {
+      clearInterval(testimonialTimer);
+    });
+
+    document.getElementById('testimonial-slider').addEventListener('mouseleave', () => {
+      startTestimonialTimer();
+    });
+
+    window.addEventListener('resize', updateTestimonials);
+
+    /* ============================
+       Back to top
+    ============================ */
+
+    const backTop = document.getElementById('back-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backTop.classList.remove('hidden');
+        backTop.classList.add('grid');
+      } else {
+        backTop.classList.add('hidden');
+        backTop.classList.remove('grid');
+      }
+    }, { passive: true });
+
+    backTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
+    });
+
+    /* ============================
+       Prevent broken hash-only links
+    ============================ */
+
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+      link.addEventListener('click', event => event.preventDefault());
+    });
+  </script>
+
+</body>
+</html>
